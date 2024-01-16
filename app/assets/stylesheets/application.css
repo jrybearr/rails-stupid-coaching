@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+ .link {
+  text-decoration: none;
+ }
+
+.input, .answer {
+  border-left: solid 6px lightgray;
+}
+
+.answer {
+  background-color: lightyellow;
+}

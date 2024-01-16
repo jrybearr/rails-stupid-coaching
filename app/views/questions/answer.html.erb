@@ -1,0 +1,22 @@
+<div class="d-flex flex-column p-5 mx-auto" style="width: 1000px;">
+  <h1> Answer</h1>
+  <div class="d-flex flex-column p-3 mb-3">
+    <div class="input d-flex flex-column p-3 mb-2">
+      <h3><%= @input %></h3>
+      <p><em>- You</em></p>
+    </div>
+    <div class="answer d-flex flex-column p-3">
+      <% if @input.downcase == 'i am going to work' %>
+          <h3><%= 'Great!' %></h3>
+      <% elsif @input.include? '?' %>
+          <h3><%= 'Silly question, get dressed and go to work!' %></h3>
+      <% else %>
+          <h3><%= "I don't care, get dressed and go to work!" %></h3>
+      <% end %>
+      <p><em>- Your coach</em></p>
+    </div>
+  </div>
+  <div class="link px-3">
+    <p><%= link_to "Go back to ask question :)", ask_path, class: "link" %></p>
+  </div>
+</div>
